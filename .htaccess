@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule  ^$ public/    [L]
-    #RewriteRule  (.*) public/$1 [L]
+    Options -Indexes -MultiViews +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule  ^(.*)$ public/index.php?_url=/$1 [NC,QSA,L]
 </IfModule>
