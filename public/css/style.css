@@ -46,6 +46,73 @@ body {
 	-webkit-font-smoothing: antialiased !important;
 }
 
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
+/* vertical alignment styles */
+.col-top {
+    vertical-align:top;
+}
+.col-middle {
+    vertical-align:middle;
+}
+.col-bottom {
+    vertical-align:bottom;
+}
+
 .justify-text {
 	text-align: justify;
 }
@@ -65,10 +132,17 @@ body {
 	transition: all .5 linear;
 }
 
-
 .navbar-responsive-collapse {
 	margin: 0 auto;
-	width: 80%;
+	width: 100%;
+}
+
+.container>.navbar-header, 
+.container-fluid>.navbar-header, 
+.container>.navbar-collapse, 
+.container-fluid>.navbar-collapse {
+    margin-right: 0;
+    margin-left: 102px;
 }
 
 .nav li {
@@ -88,7 +162,6 @@ body {
 
 .active-menu {
 	background-color: #e36f8a;
-    //background-color: #e36f8a;
 	content: '.';
 	display: block;
 	height: 5px;
@@ -133,6 +206,15 @@ body {
 	.navbar-responsive-collapse  {
 		width: 100%;
 	}
+    
+    .container>.navbar-header, 
+    .container-fluid>.navbar-header, 
+    .container>.navbar-collapse, 
+    .container-fluid>.navbar-collapse {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
 	
 	.active-menu {
 		display: none !important;
@@ -213,11 +295,11 @@ body {
 }
 
 #home-row-1 {
-    font-size: 45px;
+    font-size: 55px;
 }
 
 #home-row-1 .font-thin {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 #home-row-2 {
@@ -334,63 +416,6 @@ body {
 	}
 }
 
-#slide-3 {
-	background-color: #000;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
-	text-align: left;
-	width: 100%;
-}
-	
-	#slide-3 .col-12 {
-		display: inline-block;
-		height: 451px;
-		margin: 0;
-		padding: 0;
-		width: 452px;
-	}
-
-	#slide-3 a,
-	#slide-3 img {
-		display: inline-block;
-		height: 100%;
-		margin: 0 auto;
-		width: 100%;
-	}
-	
-@media (max-width: 991px) {
-	#slide-3 {
-		text-align: center;
-		width: 100%;
-	}
-	
-	#slide-3 .row {
-		left: 0 !important;
-		margin: 0;
-		width: 100% !important;
-	}
-	
-	#slide-3 .col-12 {
-		height: auto;
-		width: 50%
-	}
-
-	#slide-3 a,
-	#slide-3 img {
-		height: auto;
-		max-height: 100%;
-		max-width: 100%;
-		width: auto;
-	}
-}
-	
-@media (max-width: 767px) {
-	#slide-3 .col-12 {
-		width: 100%;
-	}
-}
-
 #slide-4 {
 	background-color: #34495e;
 	color: #e4e6e5;
@@ -474,91 +499,6 @@ body {
 	font-size: 35px;
 	line-height: 50px;
 	text-align: center;
-}
-
-#lightbox-out {
-	background-color: rgba( 0, 0, 0, 0.7 );
-	height: 100%;
-	position: fixed;
-	width: 100%;
-	z-index: 99999;
-}
-
-.with-hover-text span {
-	display: none;
-}
-
-.zoom {
-	background-image: url('../images/zoom.png');
-	background-position: center center;
-	background-repeat: no-repeat;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 999;
-}
-
-#arrows {
-	bottom: 10%;
-	height: 80px;
-	position: fixed;
-	right: 10%;
-	width: 80px;
-	z-index: 1000;
-}
-
-#arrows div {
-	background-image: url('../images/website-arrows.png');
-	cursor: pointer;
-	height: 30px;
-	position: absolute;
-	width: 30px;
-}
-
-#arrows div.disabled {
-	cursor: default;
-}
-
-#arrow-up {
-	background-position: 30px 0;
-	left: 25px;
-	top: 0;
-}
-
-#arrow-up.disabled {
-	background-position: 0 0;
-}
-
-#arrow-down {
-	background-position: 30px -30px;
-	left: 25px;
-	bottom: 0;
-}
-
-#arrow-down.disabled {
-	background-position: 0 -30px;
-}
-
-#arrow-left {
-	background-position: 30px -60px;
-	left: 0;
-	top: 25px;
-}
-
-#arrow-left.disabled {
-	background-position: 0 -60px;
-}
-
-#arrow-right {
-	background-position: 30px -90px;
-	right: 0;
-	top: 25px;
-}
-
-#arrow-right.disabled {
-	background-position: 0 -90px;
 }
 
 .navigation-slide {
