@@ -174,7 +174,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #fff;
-  background-color: rgba(255,255,255,.6);
+  background-color: rgba(255,255,255,.70);
   border: 1px solid #ddd;
   border: 1px solid rgba(86,61,124,.7);
 }
@@ -182,7 +182,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #fff;
-  background-color: rgba(227, 111, 138,.4);
+  background-color: rgba(227, 111, 138,.55);
   border: 2px dotted #ddd;
   border: 2px dotted rgba(86,61,124,.7);
 }
@@ -284,7 +284,7 @@ body {
 #names .font-semibold,
 #names .font-light,
 #names .font-thin{
-    color: #F58DA4;
+    color: #E36F8A
     line-height: 0.8;
     //#9A9A9A
 }
