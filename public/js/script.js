@@ -41,13 +41,13 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
-		$(".navbar-collapse").collapse('hide');
+		$(".navbar-responsive-collapse").collapse('hide');
 	});
     scrollableLinks.click(function (e) {
 		e.preventDefault();
 		dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
-		$(".navbar-collapse").collapse('hide');
+		$(".navbar-responsive-collapse").collapse('hide');
 	});
     arrows.click(function(e) {
         var slide = 1;
@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
         htmlbody.stop(false, false).animate({
             scrollTop: offset_top
         }, 1500, 'easeInOutQuart');
-		$(".navbar-collapse").collapse('hide');
+		$(".navbar-responsive-collapse").collapse('hide');
 	});
 	
 	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
-		$(".navbar-collapse").collapse('hide');
+		$(".navbar-responsive-collapse").collapse('hide');
 	});
     // menu
     //Cache some variables
@@ -137,10 +137,10 @@ function addBabies() {
 }
 
 var options = {
-  useEasing : true, 
-  useGrouping : true, 
-  separator : '.', 
-  decimal : ',' 
+  useEasing : true, 
+  useGrouping : true, 
+  separator : '.', 
+  decimal : ',' 
 }
 var demo = new countUp("population-nl", 0, 16849314, 0, 9.5, options);
 
